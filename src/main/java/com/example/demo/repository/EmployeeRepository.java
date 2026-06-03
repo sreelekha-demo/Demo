@@ -12,6 +12,8 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
     List<Employee> findByDepartment(String department);
 
+    List<Employee> findByName(String Name);
+
     @Query("SELECT e FROM Employee e WHERE e.salary > :salary")
     List<Employee> findEmployeesWithSalaryGreaterThan(@Param("salary") Double salary);
 
