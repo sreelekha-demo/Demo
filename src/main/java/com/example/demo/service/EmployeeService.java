@@ -14,6 +14,8 @@ import java.util.logging.Logger;
 @RequiredArgsConstructor
 public class EmployeeService {
 
+    Logger log = (Logger) LoggerFactory.getLogger(EmployeeService.class);
+
     private final EmployeeRepository employeeRepository;
 
     public List<Employee> getAllEmployees() {
@@ -37,6 +39,7 @@ public class EmployeeService {
     }
 
     public List<EmployeeDepartmentDTO> getDepartmentProjection() {
+        log.info("getDepartmentProjection");
         return employeeRepository.fetchEmployeeDepartments();
     }
 
