@@ -10,6 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+
 public class Employee {
 
     @Id
@@ -25,4 +26,9 @@ public class Employee {
 
     @Column(name = "SALARY")
     private Double salary;
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
