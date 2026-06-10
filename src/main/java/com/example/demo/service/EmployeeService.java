@@ -23,6 +23,7 @@ public class EmployeeService {
     }
 
     public Employee saveEmployee(Employee employee) {
+        log.info("Save the Employee :");
         return employeeRepository.save(employee);
     }
 
